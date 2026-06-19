@@ -21,7 +21,7 @@ registerSocketHandlers(io);
 await connectDatabase();
 
 server.listen(env.PORT, () => {
-  console.log(`TrackFlow API listening on http://localhost:${env.PORT}`);
+  console.log(`TrackFlow API listening on port ${env.PORT}`);
 });
 
 async function shutdown(signal: string) {

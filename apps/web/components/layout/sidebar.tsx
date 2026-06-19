@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Flame, Gauge, LineChart, Radio } from "lucide-react";
+import { TRACKER_SCRIPT_URL } from "@/lib/runtime-config";
 import { cn } from "@/lib/utils";
 
 const navItems = [
@@ -61,7 +62,7 @@ export function Sidebar() {
           <code className="block max-w-full overflow-hidden rounded-md bg-black/30 p-3 text-[11px] leading-5 text-muted-foreground">
             <span className="block">&lt;script</span>
             <span className="block break-all pl-2">
-              src=&quot;http://localhost:4000/tracker.js&quot;&gt;
+              src=&quot;{TRACKER_SCRIPT_URL}&quot;&gt;
             </span>
             <span className="block">&lt;/script&gt;</span>
           </code>

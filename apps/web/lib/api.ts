@@ -8,9 +8,7 @@ import type {
   SessionJourney,
   SessionsResponse
 } from "@/lib/types";
-
-export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:4000";
-export const SOCKET_URL = process.env.NEXT_PUBLIC_SOCKET_URL ?? API_BASE_URL;
+import { API_BASE_URL } from "@/lib/runtime-config";
 
 export const api = axios.create({
   baseURL: API_BASE_URL,

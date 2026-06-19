@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { io, type Socket } from "socket.io-client";
-import { SOCKET_URL } from "@/lib/api";
+import { SOCKET_URL } from "@/lib/runtime-config";
 import { useAnalyticsStore } from "@/store/analytics-store";
 
 interface UseSocketEventsOptions {

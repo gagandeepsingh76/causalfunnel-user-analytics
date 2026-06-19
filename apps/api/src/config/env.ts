@@ -16,7 +16,7 @@ const envSchema = z.object({
     .default("development"),
   PORT: z.coerce.number().int().positive().default(4000),
   MONGODB_URI: z.string().min(1, "MONGODB_URI is required"),
-  API_CORS_ORIGIN: z.string().default("http://localhost:3000")
+  API_CORS_ORIGIN: z.string().min(1, "API_CORS_ORIGIN is required")
 });
 
 const parsed = envSchema.safeParse(process.env);
@@ -28,5 +28,8 @@ if (!parsed.success) {
 
 export const env = {
   ...parsed.data,
-  corsOrigins: parsed.data.API_CORS_ORIGIN.split(",").map((origin) => origin.trim())
+  corsOrigins: parsed.data.API_CORS_ORIGIN.split(",")
+    .map((origin) => origin.trim())
+    .filter(Boolean)
+    .map((origin) => (origin === "*" ? origin : origin.replace(/\/+$/, "")))
 };

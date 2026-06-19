@@ -56,11 +56,11 @@ trackflow-ai/
 Create environment files from the examples:
 
 ```bash
-cp .env.example apps/api/.env
-cp .env.example apps/web/.env.local
+cp apps/api/.env.example apps/api/.env
+cp apps/web/.env.example apps/web/.env.local
 ```
 
-Update `MONGODB_URI` with your MongoDB Atlas connection string.
+Update `MONGODB_URI` with your MongoDB Atlas connection string and set the web/API URLs for the environment you are running.
 
 ## Install
 
@@ -83,34 +83,30 @@ npm run dev -w apps/api
 npm run dev -w apps/web
 ```
 
-Default URLs:
+Default ports:
 
-- API: `http://localhost:4000`
-- Dashboard: `http://localhost:3000/dashboard`
-- Tracker script: `http://localhost:4000/tracker.js`
+- API: `4000`
+- Dashboard: `3000`
+- Tracker script: served from the API origin configured in `NEXT_PUBLIC_API_URL`
 
 ## Tracking Script
 
 Add this to any website you want to track:
 
 ```html
-<script src="http://localhost:4000/tracker.js"></script>
-```
-
-For production:
-
-```html
-<script src="https://your-api-domain.com/tracker.js"></script>
+<script src="https://<your-render-service>.onrender.com/tracker.js"></script>
 ```
 
 If you host the tracker separately, configure the endpoint before loading it:
 
 ```html
 <script>
-  window.TRACKFLOW_ENDPOINT = "https://your-api-domain.com/api/events";
+  window.TRACKFLOW_ENDPOINT = "https://<your-render-service>.onrender.com/api/events";
 </script>
 <script src="/tracker.js"></script>
 ```
+
+When the tracker is loaded from the API service, it automatically derives the event endpoint from the script URL.
 
 ## API
 
@@ -133,24 +129,7 @@ npm run build
 
 ## Deployment
 
-### API
-
-1. Create a MongoDB Atlas database.
-2. Deploy `apps/api` to Render, Railway, Fly.io, or a Node-compatible host.
-3. Set:
-   - `MONGODB_URI`
-   - `PORT`
-   - `API_CORS_ORIGIN=https://your-dashboard-domain.com`
-4. Build with `npm run build -w apps/api`.
-5. Start with `npm run start -w apps/api`.
-
-### Web
-
-1. Deploy `apps/web` to Vercel.
-2. Set:
-   - `NEXT_PUBLIC_API_URL=https://your-api-domain.com`
-   - `NEXT_PUBLIC_SOCKET_URL=https://your-api-domain.com`
-3. Build with `npm run build -w apps/web`.
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for exact Render, Vercel, and MongoDB Atlas settings.
 
 ### MongoDB Atlas
 
