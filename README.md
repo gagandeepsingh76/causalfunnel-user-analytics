@@ -1,136 +1,379 @@
+# <h1 align="center">TrackFlow AI – Real-Time User Analytics Platform</h1>
+
+<p align="center">
+  A production-ready real-time user analytics platform that captures user sessions, page views, click events, device information, and visitor behavior using a lightweight tracking script, real-time dashboards, and scalable event processing.
+</p>
+
+<p align="center">
+  <a href="https://causalfunnel-user-analytics-web.vercel.app/dashboard"><strong>Live Demo</strong></a>
+  |
+  <a href="https://causalfunnel-user-analytics.onrender.com"><strong>Backend API</strong></a>
+  |
+  <a href="https://causalfunnel-user-analytics.onrender.com/health"><strong>Health</strong></a>
+  |
+  <a href="https://github.com/gagandeepsingh76/causalfunnel-user-analytics"><strong>Repository</strong></a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs" alt="Next.js" />
+  <img src="https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white" alt="Express" />
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" alt="MongoDB" />
+  <img src="https://img.shields.io/badge/Socket.IO-010101?style=flat-square&logo=socketdotio&logoColor=white" alt="Socket.IO" />
+  <img src="https://img.shields.io/badge/TypeScript-3178c6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/TailwindCSS-06b6d4?style=flat-square&logo=tailwindcss&logoColor=white" alt="TailwindCSS" />
+</p>
+
+<p align="center">
+  <img width="1344" height="614" alt="image" src="https://github.com/user-attachments/assets/9eb9ecec-af66-49f7-8e3d-ac3421eca843" />
+</p>
+
+---
+
 # TrackFlow AI
 
-TrackFlow AI is a mini Mixpanel/Hotjar-style analytics platform with a standalone event tracker, a realtime Express API, MongoDB Atlas storage, and a premium dark SaaS dashboard built with Next.js 15.
+TrackFlow AI is a full-stack real-time analytics platform designed to capture, process, and visualize user behavior across websites and applications.
 
-## Features
+The platform provides:
 
-- Standalone `tracker.js` script for automatic `page_view` and `click` tracking.
-- Session storage with `session_id`, page URL, timestamp, click coordinates, user agent, device, browser, and country hints.
-- Express + TypeScript API with Zod validation, centralized error handling, MongoDB aggregations, Socket.io realtime updates, CSV export, search, filters, and pagination.
-- Next.js 15 App Router dashboard with Zustand state, Axios data layer, Recharts analytics, Framer Motion transitions, shadcn-style UI components, skeleton loaders, empty states, responsive layouts, and realtime activity.
-- Heatmap page with URL selector, click intensity overlay, and hover analytics.
-- Session journey page with ordered event timeline and CSV export.
+* Real-time session tracking
+* Page view analytics
+* Click event monitoring
+* Device analytics
+* Country tracking
+* Session journey analysis
+* Live dashboard updates
+* CSV export functionality
+* Lightweight tracking script integration
 
-## Folder Structure
+TrackFlow AI enables product teams, startups, and businesses to understand how users interact with their applications through a simple yet scalable analytics infrastructure.
 
-```txt
-trackflow-ai/
-  apps/
-    api/
-      public/tracker.js
-      src/
-        config/
-        controllers/
-        middleware/
-        models/
-        routes/
-        schemas/
-        services/
-        utils/
-        app.ts
-        index.ts
-        socket.ts
-    web/
-      app/
-        dashboard/
-          heatmap/
-          session/[id]/
-        globals.css
-        layout.tsx
-        page.tsx
-      components/
-        charts/
-        dashboard/
-        layout/
-        providers/
-        ui/
-      hooks/
-      lib/
-      store/
-  package.json
-  tsconfig.base.json
-```
+---
 
-## Environment
+# Live Demo
 
-Create environment files from the examples:
+<p align="center">
+  <a href="https://causalfunnel-user-analytics-web.vercel.app/dashboard">
+    <strong>https://causalfunnel-user-analytics-web.vercel.app/dashboard</strong>
+  </a>
+</p>
+
+---
+
+# Backend API
+
+<p align="center">
+  <a href="https://causalfunnel-user-analytics.onrender.com">
+    <strong>https://causalfunnel-user-analytics.onrender.com</strong>
+  </a>
+</p>
+
+---
+
+# Health Endpoint
+
+<p align="center">
+  <a href="https://causalfunnel-user-analytics.onrender.com/health">
+    <strong>https://causalfunnel-user-analytics.onrender.com/health</strong>
+  </a>
+</p>
 
 ```bash
-cp apps/api/.env.example apps/api/.env
-cp apps/web/.env.example apps/web/.env.local
+curl https://causalfunnel-user-analytics.onrender.com/health
 ```
 
-Update `MONGODB_URI` with your MongoDB Atlas connection string and set the web/API URLs for the environment you are running.
+---
 
-## Install
+# GitHub Repository
 
-```bash
-npm install
+<p align="center">
+  <a href="https://github.com/gagandeepsingh76/causalfunnel-user-analytics">
+    <strong>https://github.com/gagandeepsingh76/causalfunnel-user-analytics</strong>
+  </a>
+</p>
+
+---
+
+# Product Screenshots
+
+## Analytics Dashboard
+
+<p align="center">
+<img width="1344" height="614" alt="image" src="https://github.com/user-attachments/assets/18d655d6-8877-4622-acbd-1cf71e27318c" />
+</p>
+
+---
+
+## Real-Time Session Monitoring
+
+<p align="center">
+<img width="1341" height="626" alt="image" src="https://github.com/user-attachments/assets/3a56089b-ee7e-4f97-8259-0d75cc249fcc" />
+</p>
+
+---
+
+## Session Analytics
+
+<p align="center">
+ <img width="1344" height="634" alt="image" src="https://github.com/user-attachments/assets/f77dedab-0dfb-4023-b94a-ce3b55b8602a" />
+
+</p>
+
+---
+
+## CSV Export
+
+<p align="center">
+ <img width="898" height="309" alt="image" src="https://github.com/user-attachments/assets/8b9f89f6-900a-4e39-b473-02749dbf0c8c" />
+
+</p>
+
+---
+
+# Why TrackFlow AI?
+
+Most analytics solutions are either:
+
+* Expensive
+* Difficult to integrate
+* Over-engineered
+* Privacy-invasive
+
+TrackFlow AI provides a lightweight analytics system that can be embedded into any website using a single tracking script.
+
+The platform focuses on:
+
+* Fast integration
+* Real-time visibility
+* Session-based analytics
+* Event-driven architecture
+* Developer-friendly APIs
+
+---
+
+# Problem Statement
+
+Modern websites require visibility into user behavior.
+
+Organizations need answers to questions such as:
+
+* Which pages are users visiting?
+* How many sessions are active?
+* What actions are users taking?
+* Which devices are most commonly used?
+* Which countries generate the most traffic?
+* What is the user journey across pages?
+
+TrackFlow AI solves these challenges through a lightweight tracking architecture and real-time analytics dashboard.
+
+---
+
+# System Architecture
+
+```mermaid
+flowchart TD
+
+A[User Browser]
+
+B[tracker.js]
+
+C[Express API]
+
+D[MongoDB Atlas]
+
+E[Socket.IO]
+
+F[Next.js Dashboard]
+
+A --> B
+
+B --> C
+
+C --> D
+
+C --> E
+
+E --> F
+
+D --> F
 ```
 
-## Development
+---
 
-Run API and dashboard together:
+# Event Collection Flow
 
-```bash
-npm run dev
+```mermaid
+sequenceDiagram
+
+participant User
+
+participant Tracker
+
+participant API
+
+participant MongoDB
+
+participant Dashboard
+
+User->>Tracker: Page Visit
+
+Tracker->>API: page_view
+
+API->>MongoDB: Store Event
+
+MongoDB-->>API: Saved
+
+API->>Dashboard: WebSocket Update
+
+Dashboard-->>User: Live Analytics
+
+User->>Tracker: Click Event
+
+Tracker->>API: click
+
+API->>MongoDB: Store Event
+
+API->>Dashboard: Real-time Update
 ```
 
-Or run each app separately:
+---
 
-```bash
-npm run dev -w apps/api
-npm run dev -w apps/web
+# Key Features
+
+* Real-Time Analytics Dashboard
+* Session Tracking
+* Page View Monitoring
+* Click Event Tracking
+* Device Analytics
+* Country Analytics
+* Session Journey Analysis
+* CSV Export
+* WebSocket Updates
+* MongoDB Event Storage
+* Tracker Script Integration
+* Live Metrics Updates
+* REST API Architecture
+* Production Deployment Ready
+
+---
+
+# Technology Stack
+
+| Layer            | Technology            |
+| ---------------- | --------------------- |
+| Frontend         | Next.js 15            |
+| Language         | TypeScript            |
+| Styling          | Tailwind CSS          |
+| Backend          | Express.js            |
+| Database         | MongoDB Atlas         |
+| Realtime         | Socket.IO             |
+| API              | REST                  |
+| Hosting          | Vercel + Render       |
+| Build Tool       | npm                   |
+| Analytics Engine | Custom Event Pipeline |
+
+---
+
+# Project Structure
+
+```text
+causalfunnel-user-analytics/
+
+├── apps/
+│
+├── api/
+│   ├── src/
+│   ├── routes/
+│   ├── services/
+│   ├── models/
+│   └── tracker.js
+│
+├── web/
+│   ├── app/
+│   ├── components/
+│   ├── hooks/
+│   ├── store/
+│   └── lib/
+│
+├── README.md
+│
+└── DEPLOYMENT.md
 ```
 
-Default ports:
+---
 
-- API: `4000`
-- Dashboard: `3000`
-- Tracker script: served from the API origin configured in `NEXT_PUBLIC_API_URL`
+# API Endpoints
 
-## Tracking Script
+| Method | Endpoint       | Description           |
+| ------ | -------------- | --------------------- |
+| GET    | /health        | Health Check          |
+| GET    | /api/sessions  | Fetch Sessions        |
+| GET    | /api/events    | Fetch Events          |
+| POST   | /api/events    | Store Analytics Event |
+| GET    | /tracker.js    | Tracking Script       |
+| GET    | /api/analytics | Dashboard Analytics   |
 
-Add this to any website you want to track:
+---
 
-```html
-<script src="https://<your-render-service>.onrender.com/tracker.js"></script>
+# Environment Variables
+
+## Backend
+
+```env
+PORT=10000
+
+MONGODB_URI=your_mongodb_connection_string
+
+API_CORS_ORIGIN=https://causalfunnel-user-analytics-web.vercel.app
 ```
 
-If you host the tracker separately, configure the endpoint before loading it:
+## Frontend
 
-```html
-<script>
-  window.TRACKFLOW_ENDPOINT = "https://<your-render-service>.onrender.com/api/events";
-</script>
-<script src="/tracker.js"></script>
+```env
+NEXT_PUBLIC_API_URL=https://causalfunnel-user-analytics.onrender.com
+
+NEXT_PUBLIC_SOCKET_URL=https://causalfunnel-user-analytics.onrender.com
 ```
 
-When the tracker is loaded from the API service, it automatically derives the event endpoint from the script URL.
+---
 
-## API
+# Deployment Status
 
-- `POST /api/events` stores an event.
-- `GET /api/sessions` returns paginated sessions with event counts and visit dates.
-- `GET /api/sessions/:id` returns an ordered session journey.
-- `GET /api/sessions/:id/export` exports one session as CSV.
-- `GET /api/sessions/export` exports filtered session events as CSV.
-- `GET /api/heatmap?page=...` returns click coordinate intensity data.
-- `GET /api/heatmap/pages` returns tracked page URLs.
-- `GET /api/analytics/overview` returns dashboard metrics, charts, feed, and live visitor count.
+| Service        | Platform      | Status    |
+| -------------- | ------------- | --------- |
+| Frontend       | Vercel        | Live      |
+| Backend        | Render        | Live      |
+| Database       | MongoDB Atlas | Connected |
+| WebSocket      | Socket.IO     | Active    |
+| Event Tracking | Production    | Working   |
 
-## Quality Checks
+---
 
-```bash
-npm run typecheck
-npm run lint
-npm run build
-```
+# Verification
 
-## Deployment
+Verified successfully:
 
-See [DEPLOYMENT.md](./DEPLOYMENT.md) for exact Render, Vercel, and MongoDB Atlas settings.
+* Dashboard loads correctly
+* Events endpoint returns 201
+* Session analytics working
+* MongoDB connected
+* WebSocket connected
+* CSV export functional
+* Tracker.js loaded globally
+* Production deployment successful
 
-### MongoDB Atlas
+---
 
-Use a production cluster, restrict network access to your API host, and create a database user with scoped read/write permissions for the TrackFlow database.
+# Author
+
+**Gagandeep Singh**
+
+GitHub: https://github.com/gagandeepsingh76
+
+Project:
+https://github.com/gagandeepsingh76/causalfunnel-user-analytics
+
+---
+
+# License
+
+MIT License
